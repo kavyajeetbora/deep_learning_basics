@@ -1,0 +1,12 @@
+ATTENTION MECHANISM IN ENCODER AND DECODER MODELS
+
+1. The basic idea is to feed some of the input to the decoder from the encoder model
+2. Attention is to place more weight or emphasis on the word in the sentence before feeding it to decoder
+3. Feeding weighted sum of the input vectors from the encoder to the decoder
+4. Weights are the new parameters for the attention model and model will learn from the data
+
+
+Model - 
+a) The encoder consist of a RNN architecture
+b) It encodes the input into tensors
+c) Then 

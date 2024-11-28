@@ -1,0 +1,40 @@
+Link to Object detection papers and examples - 
+https://github.com/amusi/awesome-object-detection
+
+RCNN for object detection
+
+1. Region Proposal
+
+- Selective search for region proposal (clustering)
+- it does heirachical clustering at different scales
+- Parameter here is the threshold to differentiate similiarities between two colors or regions 
+
+2. Feature extraction
+- after proposing the regions, we crop each region and then we resize it for feeding it to the model
+- as separate regions
+- model is CNN 
+- and the output of CNN model is the feature that represents the image 
+
+3. RCNN - classification
+Simply after getting the feature extraction of the region (in the form of cropped images)
+
+4. RCNN - regression
+In the regression the problem is to minimize the true displacement and the predicted displacement 
+
+5. RCNN - training
+- Fine tuning the pretrained CNN model
+
+
+Demerits - 
+The amount of computation is more in R-CNN because for each image there is N number of region proposed.
+That means more input is feeded in the deep network and results in more requirement of computation power.
+
+
+YOLO - You only look once - Object detection technique
+
+- The idea for YOLO is to overcome the regional approach which leads to more number of weigths
+- In YOLO the image is divided into S by S grids and each grid is checked for confidence - 
+- Confidence of grid containing an object which will be verified with the training data.
+- The higher confidence grids will only be retained for further computation and rest will be discarded. 
+- In the further computation the (x,y,w,h) will be trained using the training examples and the class that object 
+  in the grid belongs to. 

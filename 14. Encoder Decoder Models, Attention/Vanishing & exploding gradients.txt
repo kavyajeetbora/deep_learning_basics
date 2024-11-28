@@ -1,0 +1,13 @@
+1. Vanishing and Exploding gradients and LSTMs
+	1.1 During forward and backward propagation, the terms are getting multiplied by the gates
+	1.2 Gates are controlling the gradient flow during both forward and backward propagation
+	1.3 how LSTM helps in solving vanishing gradient problem ? -> if a particular path in LSTM RNN model is not contributing
+	in forward propagation or in order words the gates (read, write and forget) are zero weigths, then during backprogation 
+	the gradients vanishes. 
+
+	1.4 In summary for gradients to vanish, all the gradients flowing through each path has to vanish
+	1.5 and for gradients to explode, the gradients flowing at least in one path has to explode
+	1.6 The LSTM in general takes care of the vanishing gradient problem but cannot deal with exploding gradient problem.
+	1.7 Hence to overcome the exploding gradient problem, clipping can be done over large magnitude vectors.
+	as we are only interested with the direction of the gradient i.e a vector we can clip/limit the magnitude
+	so that the chain product of the gradients while back propagating doesnot explode.
